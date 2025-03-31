@@ -28,3 +28,5 @@ RUN TENV_LATEST_VERSION=$(curl --silent https://api.github.com/repos/tofuutils/t
 RUN sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
   && sudo unzip awscliv2.zip \
   && sudo ./aws/install
+# AWS CDKのインストール
+RUN sudo npm install -g aws-cdk

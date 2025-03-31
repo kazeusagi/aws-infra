@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "aws-cdk": "^2.1003.0"
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
   }
 }
