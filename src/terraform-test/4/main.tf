@@ -14,7 +14,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-northeasst-1"
+  region = "ap-northeast-1"
   default_tags {
     tags = {
       Terraform = "true"
@@ -33,5 +33,13 @@ provider "aws" {
       STAGE     = "dev"
       MODULE    = "case1"
     }
+  }
+}
+
+resource "aws_sqs_queue" "test_queue" {
+  name             = "test-queue-tf2"
+  max_message_size = 4096
+  tags = {
+    name = "test-queue-tf2"
   }
 }
